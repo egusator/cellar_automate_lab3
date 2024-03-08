@@ -32,6 +32,8 @@ public class HelloController {
     protected void onStartStopButtonClick() {
         if (timeline != null) {
             timeline.stop();
+            timeline = null;
+            return;
         }
 
         row = new Row(Integer.parseInt(ruleTextField.getText()), COLUMNS_NUMBER);
